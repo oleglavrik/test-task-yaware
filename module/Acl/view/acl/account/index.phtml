@@ -1,0 +1,19 @@
+<h2>Account | all users:</h2>
+<?php echo $this->showMessages(); ?>
+<a href="<?php echo $this->url('account/adduser', array('action'=> 'adduser'));?>" class="btn btn-info btn-sm right-loc" role="button">Add new user</a>
+<table class="table-bordered table">
+    <thead>
+        <tr>
+            <th>Email:</th>
+            <th>Role:</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($this->allUsers as $user) : ?>
+        <tr>
+            <td><?php echo $user['email']; ?></td>
+            <td><?php echo $user['roleId']; ?></td>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
